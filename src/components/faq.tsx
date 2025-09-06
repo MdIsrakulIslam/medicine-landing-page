@@ -67,16 +67,16 @@ export function FAQ() {
              <img
               src="/lung.png"
               alt="LAMARE app interface"
-              className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-60"
+              className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-0"
             />
             
           </div>
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="rounded-lg bg-white/80 backdrop-blur-sm">
+              <div key={index} className="rounded-lg  backdrop-blur-sm">
                 <button
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50"
+                  className="w-full px-6 py-4 text-left flex items-center justify-between "
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 >
                   <span className="font-mediu text-xl text-[#454545]">{faq.question}</span>
