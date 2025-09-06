@@ -84,7 +84,7 @@ export function Header() {
               key={item.id}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href, item.id)}
-              className={`px-4 py-2 rounded-full transition-all duration-200 ${
+              className={`px-4 py-2 rounded-full transition-all duration-200 overflow-y-auto ${
                 activeSection === item.id
                   ? "bg-blue-600 text-white"
                   : "hover:text-white hover:bg-gray-800"

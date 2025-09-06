@@ -40,21 +40,19 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-   <section id="faq" className="py-20 relative overflow-hidden mt-0">
-      {/* Background Image Container */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('/lung.png')", // Replace with your image path
-          backgroundPosition: "left 10% top -20%", // Adjust as needed
-          backgroundSize: "10%", // Adjust as needed
-          backgroundRepeat: "no-repeat",
-         // Adjust opacity as needed
-        }}
-      />
-      
-      {/* Optional Overlay for Better Readability */}
-      <div className="absolute inset-0 bg-gradient-to-r"></div>
+    <section 
+      id="faq" 
+      className="py-20 relative overflow-hidden mt-0"
+      style={{
+        backgroundImage: "url('/faq.jpg')", // Add your background image path
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+        
+      {/* Optional overlay for better readability */}
+      <div className="absolute inset-0 bg-white/0"></div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
@@ -66,19 +64,17 @@ export function FAQ() {
               alt="LAMARE app interface"
               className="w-full lg:w-[510px] lg:absolute -bottom-20 z-20"
             />
-            <img
-              src="/bluebackground.png"
+             <img
+              src="/lung.png"
               alt="LAMARE app interface"
-              className="w-full lg:w-[810px] lg:left-1    hidden lg:flex lg:absolute -bottom-20"
+              className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-60"
             />
+            
           </div>
-          {/* <div className="bg-oi image">
-            ar vitore image
-          </div> */}
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className=" rounded-lg bg-white/80 backdrop-blur-sm">
+              <div key={index} className="rounded-lg bg-white/80 backdrop-blur-sm">
                 <button
                   className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50"
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
