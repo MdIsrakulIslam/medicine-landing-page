@@ -98,7 +98,7 @@ export function Features() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className={`${feature.color} border-0 h-full transition-all duration-300 hover:shadow-lg relative z-10 hover:scale-105`}
+              className={`${feature.color} border h-full border-[#A0B9F3]`}
             >
               <CardHeader className="pb-3">
                 <div className="text-3xl mb-3">{feature.icon}</div>

@@ -10,7 +10,7 @@ export function Footer() {
 
         <div>
           <nav className="flex flex-wrap items-center justify-center space-x-8 mb-8">
-            <a href="#features" className="text-gray-300 hover:text-white transition-colors">
+            <a href="#features" className="text-gray-300 hover:text-white transition-colors ">
               Features
             </a>
             <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors">

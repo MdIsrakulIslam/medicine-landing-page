@@ -40,13 +40,13 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-   <section id="faq" className="py-20 relative overflow-hidden mt-30">
+   <section id="faq" className="py-20 relative overflow-hidden mt-0">
       {/* Background Image Container */}
       <div 
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: "url('/lung.png')", // Replace with your image path
-          backgroundPosition: "left top -20%", // Adjust as needed
+          backgroundPosition: "left 10% top -20%", // Adjust as needed
           backgroundSize: "10%", // Adjust as needed
           backgroundRepeat: "no-repeat",
          // Adjust opacity as needed
@@ -57,16 +57,24 @@ export function FAQ() {
       <div className="absolute inset-0 bg-gradient-to-r"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
           <div>
             <span className="text-blue-600 font-semibold">• Faq</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-8 text-balance text-[#454545]">Everything You Need to Know</h2>
             <img
               src="/angleiPhone 15.png"
               alt="LAMARE app interface"
-              className="w-full max-w-sm mx-auto rounded-2xl shadow-lg"
+              className="w-full lg:w-[510px] lg:absolute -bottom-20 z-20"
+            />
+            <img
+              src="/bluebackground.png"
+              alt="LAMARE app interface"
+              className="w-full lg:w-[810px] lg:left-1    hidden lg:flex lg:absolute -bottom-20"
             />
           </div>
+          {/* <div className="bg-oi image">
+            ar vitore image
+          </div> */}
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (

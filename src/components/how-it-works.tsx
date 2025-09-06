@@ -29,7 +29,7 @@ export function HowItWorks() {
   return (
     <section id="how-it-works" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-16">
             <span className="text-blue-600 font-semibold">• How it works</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-4 text-balance text-[#454545]">Your Surgery Journey, Simplified</h2>
@@ -37,7 +37,7 @@ export function HowItWorks() {
 
           <div className="space-y-4 ">
             {steps.map((step, index) => (
-              <div key={index} className="flex items-start space-x-6 bg-[#F5F5F5] p-5 boder rounded-[4px]">
+              <div key={index} className="flex items-start space-x-6 bg-[#F5F5F5] p-5 boder rounded-[4px] ">
                 <div
                   className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-white font-bold ${
                     step.active ? "bg-[#225CE4]" : "bg-gray-300"

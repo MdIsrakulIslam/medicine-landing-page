@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "LAMARE - Your AI-Powered Digital Companion for Healthcare",
   description:
     "AI-powered healthcare companion supporting your surgery journey with SurgiSmart, CareLoop, and EmotiCare tools.",
-  generator: "v0.app",
+  
 }
 
 export default function RootLayout({

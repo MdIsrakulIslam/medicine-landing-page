@@ -25,8 +25,7 @@ export function Hero() {
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto mb-12">
           <h1
-            className="text-4xl md:text-6xl font-bold mb-6 text-balance"
-            style={{ color: "#ffffff !important" }}
+            className="text-4xl md:text-6xl font-bold mb-6 text-balance mt-28 bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent"
           >
             Your AI-Powered digital companion for health care
           </h1>
@@ -42,7 +41,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
-              className="px-8 py-4 rounded-3xl transition-all duration-300 hover:scale-105 font-semibold"
+              className="px- py-8 rounded-4xl transition-all duration-300 hover:scale-105 font-semibold"
               style={{
                 background: "linear-gradient(90deg, #1D4EC2 0%, #4E83FF 100%)",
                 color: "#ffffff",
@@ -50,9 +49,9 @@ export function Hero() {
                 boxShadow: "0 4px 12px rgba(29, 78, 194, 0.4)",
               }}
             >
-              <div className="flex gap-3 items-center">
+              <div className="flex gap-3 items-center ">
                 <span className="text-lg">Download App</span>
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 border border-white/30">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full   border-l-2 border-white shadow-none">
                   <span className="text-lg">→</span>
                 </div>
               </div>
@@ -60,7 +59,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="px-8 py-3 bg-transparent rounded-3xl"
+              className="px- py-8 bg-transparent rounded-4xl"
               style={{
                 borderColor: "#ffffff !important",
                 color: "#ffffff !important",
@@ -69,7 +68,7 @@ export function Hero() {
             >
               <div className="flex gap-2 items-center">
                 <div>How It Works</div>
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-white/10 border border-white/30">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full   border-l-2 border-white shadow-none">
                   <span className="text-lg">→</span>
                 </div>
               </div>
@@ -77,34 +76,86 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Statistics */}
-        <div className="flex justify-between items-center mb-12 max-w-6xl mx-auto">
-          <div className="text-left">
+        {/* Statistics with Image Gallery */}
+        <div className="flex justify-between items-center max-w-6xl mx-auto relative">
+          {/* Image gallery container */}
+          <div className="absolute inset-0 flex justify-between items-center -top-32 z-0">
+            {/* Left side images */}
+            <div className="relative -ml-20  rotate-30 ">
+              <div className="absolute -top-30 left-22 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-30">
+                <img 
+                  src="/patient1.png" 
+                  alt="Healthcare professional" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -top-30 left-15 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-20">
+                <img 
+                  src="/patient2.jpg" 
+                  alt="Healthcare professional" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -top-30 left-6 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-10">
+                <img 
+                  src="/patient3.png" 
+                  alt="Happy patient" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Right side images */}
+            <div className="relative -mr-20 rotate-330">
+              <div className="absolute -top-28 right-20 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-30">
+                <img 
+                  src="/doc1.png" 
+                  alt="Healthcare professional" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -top-28 right-30 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-20">
+                <img 
+                  src="/doc2.png" 
+                  alt="Happy patient" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -top-28 right-40 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-10">
+                <img 
+                  src="/doc3.png" 
+                  alt="Happy patient" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* Statistics */}
+          <div className="text-left rotate-30 -ml-20 z-10">
             <div
-              className="text-2xl font-bold"
-              style={{ color: "#ffffff !important" }}
+              className="text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent"
             >
               5k+ Happy
             </div>
-            <div style={{ color: "#bfdbfe !important" }}>patients</div>
+            <div className="text-3xl">patients</div>
           </div>
-          <div className="text-right">
+          <div className="text-left rotate-330 -mr-40 z-10">
             <div
-              className="text-2xl font-bold"
-              style={{ color: "#ffffff !important" }}
+              className="text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent"
             >
               500+ healthcare
             </div>
-            <div style={{ color: "#bfdbfe !important" }}>providers</div>
+            <div className="text-3xl">providers</div>
           </div>
         </div>
 
         {/* Mobile mockups */}
-        <div className="flex justify-center items-end space-x-4 max-w-4xl mx-auto">
+        <div className="flex justify-center items-end space-x-4 max-w-4xl mx-auto ">
           <img
             src="/iPhone 13 Pro.png"
             alt="LAMARE app dashboard"
-            className="w-[1473px] h-[672px] object-cover rounded-2xl shadow-2xl"
+            className="w-[1473px] h-[672px] object-cover"
           />
         </div>
       </div>
