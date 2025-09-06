@@ -12,21 +12,19 @@ export function Hero() {
     >
       {/* Background decorative elements */}
       <div className="absolute top-20 left-10 w-16 h-16 bg-white/10 rounded-full"></div>
-      <div
+      {/* <div
         className="absolute top-40 right-20 w-12 h-12 rounded-full"
         style={{ backgroundColor: "#f97316 !important" }}
-      ></div>
-      <div
+      ></div> */}
+      {/* <div
         className="absolute bottom-20 left-20 w-8 h-8 rounded-full"
         style={{ backgroundColor: "#f97316 !important" }}
-      ></div>
+      ></div> */}
       <div className="absolute bottom-40 right-10 w-20 h-20 bg-white/10 rounded-full"></div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <div className="max-w-4xl mx-auto mb-12">
-          <h1
-            className="text-4xl md:text-6xl font-bold mb-6 text-balance mt-28 bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent"
-          >
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance mt-28 bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent">
             Your AI-Powered digital companion for health care
           </h1>
           <p
@@ -82,24 +80,24 @@ export function Hero() {
           <div className="absolute inset-0 flex justify-between items-center -top-32 z-0">
             {/* Left side images */}
             <div className="relative -ml-20  rotate-30 ">
-              <div className="absolute -top-30 left-22 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-30">
-                <img 
-                  src="/patient1.png" 
-                  alt="Healthcare professional" 
+              <div className="absolute -top-25 left-23 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-30">
+                <img
+                  src="/patient1.png"
+                  alt="Healthcare professional"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -top-30 left-15 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-20">
-                <img 
-                  src="/patient2.jpg" 
-                  alt="Healthcare professional" 
+              <div className="absolute -top-25 left-15 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-20">
+                <img
+                  src="/patient2.jpg"
+                  alt="Healthcare professional"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -top-30 left-6 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-10">
-                <img 
-                  src="/patient3.png" 
-                  alt="Happy patient" 
+              <div className="absolute -top-25 left-6 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-10">
+                <img
+                  src="/patient3.png"
+                  alt="Happy patient"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -107,24 +105,24 @@ export function Hero() {
 
             {/* Right side images */}
             <div className="relative -mr-20 rotate-330">
-              <div className="absolute -top-28 right-20 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-30">
-                <img 
-                  src="/doc1.png" 
-                  alt="Healthcare professional" 
+              <div className="absolute -top-22 right-25 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-30">
+                <img
+                  src="/doc1.png"
+                  alt="Healthcare professional"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -top-28 right-30 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-20">
-                <img 
-                  src="/doc2.png" 
-                  alt="Happy patient" 
+              <div className="absolute -top-22 right-35 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-20">
+                <img
+                  src="/doc2.png"
+                  alt="Happy patient"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -top-28 right-40 w-20 h-20 rounded-full overflow-hidden border-4 border-white/20 z-10">
-                <img 
-                  src="/doc3.png" 
-                  alt="Happy patient" 
+              <div className="absolute -top-22 right-45 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-10">
+                <img
+                  src="/doc3.png"
+                  alt="Happy patient"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -133,17 +131,13 @@ export function Hero() {
 
           {/* Statistics */}
           <div className="text-left rotate-30 -ml-20 z-10">
-            <div
-              className="text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent"
-            >
+            <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent">
               5k+ Happy
             </div>
             <div className="text-3xl">patients</div>
           </div>
           <div className="text-left rotate-330 -mr-40 z-10">
-            <div
-              className="text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent"
-            >
+            <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent">
               500+ healthcare
             </div>
             <div className="text-3xl">providers</div>
@@ -160,11 +154,11 @@ export function Hero() {
         </div>
       </div>
 
-      <style jsx>{`
+      {/* <style jsx>{`
         .hero-section {
           background: url("/background-image.png") no-repeat center center/cover;
         }
-      `}</style>
+      `}</style> */}
     </section>
   );
 }
