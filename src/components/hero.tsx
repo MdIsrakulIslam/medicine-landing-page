@@ -1,34 +1,41 @@
 "use client";
-
 import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
     <section
-      className="hero-section text-white py-20 relative overflow-hidden"
+      className="hero-section text-white py-8 md:py-20 relative overflow-hidden min-h-screen"
       style={{
         background: `url('/homebackground.png') no-repeat center center/cover`,
       }}
     >
       {/* Background decorative elements */}
-      <div className="absolute top-20 left-10 w-16 h-16 bg-white/10 rounded-full"></div>
-      {/* <div
-        className="absolute top-40 right-20 w-12 h-12 rounded-full"
-        style={{ backgroundColor: "#f97316 !important" }}
-      ></div> */}
-      {/* <div
-        className="absolute bottom-20 left-20 w-8 h-8 rounded-full"
-        style={{ backgroundColor: "#f97316 !important" }}
-      ></div> */}
-      <div className="absolute bottom-40 right-10 w-20 h-20 bg-white/10 rounded-full"></div>
+      <div className="absolute top-8 md:top-20 left-2 md:left-10 w-6 md:w-16 h-6 md:h-16 bg-white/10 rounded-full"></div>
+      <div className="absolute bottom-16 md:bottom-40 right-2 md:right-10 w-8 md:w-20 h-8 md:h-20 bg-white/10 rounded-full"></div>
+      
+      {/* Marked images - Hidden on mobile and tablet, shown on desktop */}
+      <div className="hidden lg:block absolute top-2/4 left-110 w-24 h-24 z-10">
+        <img
+          src="/operation.png"
+          alt="Decoration"
+          className="w-full h-full object-contain"
+        />
+      </div>
+      <div className="hidden lg:block absolute top-2/4 right-65 w-24 h-24 z-10">
+        <img
+          src="/plus.png"
+          alt="Decoration"
+          className="w-full h-full object-contain"
+        />
+      </div>
 
-      <div className="container mx-auto px-4 text-center relative z-10">
-        <div className="max-w-4xl mx-auto mb-12">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance mt-28 bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent">
+      <div className="container mx-auto px-4 md:px-4 text-center relative z-10">
+        <div className="max-w-4xl mx-auto mb-6 md:mb-12">
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4 md:mb-6 text-balance mt-8 md:mt-28 bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent leading-tight px-2 md:px-0">
             Your AI-Powered digital companion for health care
           </h1>
           <p
-            className="text-lg md:text-xl mb-8 text-pretty"
+            className="text-base md:text-lg lg:text-xl mb-6 md:mb-8 text-pretty px-4 md:px-0 leading-relaxed"
             style={{ color: "#dbeafe !important" }}
           >
             LAMARE supports you across your healthcare journey with AI-powered
@@ -36,10 +43,10 @@ export function Hero() {
             managing long-term conditions, and EmotiCare for personalized
             emotional support, including pharmacovigilance
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col md:flex-row gap-4 justify-center px-4 md:px-0">
             <Button
               size="lg"
-              className="px- py-8 rounded-4xl transition-all duration-300 hover:scale-105 font-semibold"
+              className="w-full md:w-auto px-8 py-4 md:py-8 rounded-4xl transition-all duration-300 hover:scale-105 font-semibold group relative overflow-hidden text-lg"
               style={{
                 background: "linear-gradient(90deg, #1D4EC2 0%, #4E83FF 100%)",
                 color: "#ffffff",
@@ -47,27 +54,31 @@ export function Hero() {
                 boxShadow: "0 4px 12px rgba(29, 78, 194, 0.4)",
               }}
             >
-              <div className="flex gap-3 items-center ">
-                <span className="text-lg">Download App</span>
-                <div className="flex items-center justify-center w-8 h-8 rounded-full   border-l-2 border-white shadow-none">
-                  <span className="text-lg">→</span>
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-4xl"></div>
+              <div className="flex gap-3 items-center justify-center relative z-10">
+                <span>Download App</span>
+                <div className="flex items-center justify-center w-8 h-8 rounded-full border-l-2 border-white shadow-none group-hover:translate-x-1 transition-transform duration-300">
+                  <span>→</span>
                 </div>
               </div>
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="px- py-8 bg-transparent rounded-4xl"
+              className="w-full md:w-auto px-8 py-4 md:py-8 bg-transparent rounded-4xl group relative overflow-hidden transition-all duration-300 hover:bg-white/10 text-lg"
               style={{
                 borderColor: "#ffffff !important",
                 color: "#ffffff !important",
                 backgroundColor: "transparent !important",
               }}
             >
-              <div className="flex gap-2 items-center">
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-4xl"></div>
+              <div className="flex gap-2 items-center justify-center relative z-10">
                 <div>How It Works</div>
-                <div className="flex items-center justify-center w-8 h-8 rounded-full   border-l-2 border-white shadow-none">
-                  <span className="text-lg">→</span>
+                <div className="flex items-center justify-center w-8 h-8 rounded-full border-l-2 border-white shadow-none group-hover:translate-x-1 transition-transform duration-300">
+                  <span>→</span>
                 </div>
               </div>
             </Button>
@@ -75,11 +86,11 @@ export function Hero() {
         </div>
 
         {/* Statistics with Image Gallery */}
-        <div className="flex justify-between items-center max-w-6xl mx-auto relative">
-          {/* Image gallery container */}
-          <div className="absolute inset-0 flex justify-between items-center -top-32 z-0">
+        <div className="flex justify-between items-center max-w-6xl mx-auto relative mb-8 md:mb-0">
+          {/* Image gallery container - Hidden on mobile/tablet, shown on desktop */}
+          <div className="hidden lg:flex absolute inset-0 justify-between items-center -top-32 z-0">
             {/* Left side images */}
-            <div className="relative -ml-20  rotate-30 ">
+            <div className="relative -ml-20 rotate-30">
               <div className="absolute -top-25 left-23 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-30">
                 <img
                   src="/patient1.png"
@@ -102,7 +113,6 @@ export function Hero() {
                 />
               </div>
             </div>
-
             {/* Right side images */}
             <div className="relative -mr-20 rotate-330">
               <div className="absolute -top-22 right-25 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-30">
@@ -128,37 +138,33 @@ export function Hero() {
               </div>
             </div>
           </div>
-
-          {/* Statistics */}
-          <div className="text-left rotate-30 -ml-20 z-10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent">
+          
+          {/* Statistics - Responsive */}
+          <div className="text-left rotate-12 md:rotate-30 -ml-2 md:-ml-20 z-10 hidden lg:block">
+            <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent ">
               5k+ Happy
             </div>
-            <div className="text-3xl">patients</div>
+            <div className="text-xl md:text-3xl">patients</div>
           </div>
-          <div className="text-left rotate-330 -mr-40 z-10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent">
+          <div className="text-left rotate-12 md:rotate-330 -mr-2 md:-mr-40 z-10 hidden lg:block">
+            <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent">
               500+ healthcare
             </div>
-            <div className="text-3xl">providers</div>
+            <div className="text-xl md:text-3xl">providers</div>
           </div>
         </div>
 
-        {/* Mobile mockups */}
-        <div className="flex justify-center items-end space-x-4 max-w-4xl mx-auto ">
-          <img
-            src="/iPhone 13 Pro.png"
-            alt="LAMARE app dashboard"
-            className="w-[1473px] h-[672px] object-cover"
-          />
+        {/* Mobile mockups - Fully responsive */}
+        <div className="flex justify-center items-end space-x-4 max-w-4xl mx-auto mt-8 md:mt-0">
+          <div className="w-full max-w-sm md:max-w-none">
+            <img
+              src="/iPhone 13 Pro.png"
+              alt="LAMARE app dashboard"
+              className="w-full h-auto md:w-[1473px] md:h-[672px] object-cover mx-auto"
+            />
+          </div>
         </div>
       </div>
-
-      {/* <style jsx>{`
-        .hero-section {
-          background: url("/background-image.png") no-repeat center center/cover;
-        }
-      `}</style> */}
     </section>
   );
 }

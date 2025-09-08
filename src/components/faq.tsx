@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Plus, Minus } from "lucide-react"
+import { Minus, Plus } from "lucide-react";
+import { useState } from "react";
 
 const faqs = [
   {
@@ -34,23 +34,22 @@ const faqs = [
     answer:
       "We provide 24/7 chat support, comprehensive help documentation, and video tutorials to assist you whenever you need help.",
   },
-]
+];
 
 export function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section 
-      id="faq" 
+    <section
+      id="faq"
       className="py-20 relative overflow-hidden mt-0"
       style={{
         backgroundImage: "url('/faq.jpg')", // Add your background image path
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
+        backgroundRepeat: "no-repeat",
       }}
     >
-        
       {/* Optional overlay for better readability */}
       <div className="absolute inset-0 bg-white/0"></div>
 
@@ -58,18 +57,19 @@ export function FAQ() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
           <div>
             <span className="text-blue-600 font-semibold">• Faq</span>
-            <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-8 text-balance text-[#454545]">Everything You Need to Know</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-8 text-balance text-[#454545]">
+              Everything You Need to Know
+            </h2>
             <img
               src="/angleiPhone 15.png"
               alt="LAMARE app interface"
               className="w-full lg:w-[510px] lg:absolute -bottom-20 z-20"
             />
-             <img
+            <img
               src="/lung.png"
               alt="LAMARE app interface"
-              className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-0"
+              className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-60"
             />
-            
           </div>
 
           <div className="space-y-4">
@@ -77,15 +77,19 @@ export function FAQ() {
               <div key={index} className="rounded-lg  backdrop-blur-sm">
                 <button
                   className="w-full px-6 py-4 text-left flex items-center justify-between "
-                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  onClick={() =>
+                    setOpenIndex(openIndex === index ? null : index)
+                  }
                 >
-                  <span className="font-mediu text-xl text-[#454545]">{faq.question}</span>
+                  <span className="font-mediu text-xl text-[#454545]">
+                    {faq.question}
+                  </span>
                   <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white border flex items-center justify-center">
-                  {openIndex === index ? (
-                    <Minus className="w-5 h-5 text-gray-500" />
-                  ) : (
-                    <Plus className="w-5 h-5 text-gray-500" />
-                  )}
+                    {openIndex === index ? (
+                      <Minus className="w-5 h-5 text-gray-500" />
+                    ) : (
+                      <Plus className="w-5 h-5 text-gray-500" />
+                    )}
                   </div>
                 </button>
                 {openIndex === index && (
@@ -99,5 +103,5 @@ export function FAQ() {
         </div>
       </div>
     </section>
-  )
+  );
 }

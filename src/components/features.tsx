@@ -3,68 +3,48 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const features = [
   {
     title: "SurgiSmart AI - SAFE Surgery Companion for patients",
-    description: "Safes support Awareness Follow-up Empowerment",
-    color: "bg-[#1D4EC2]", // Solid blue for this card
-    textColor: "text-white",
-    icon: "🛡️",
+    description: "Safe+ support Awareness Follow-up Empowerment",
+    image: "/check.png",
   },
   {
     title: "CareLoop (Long term conditions)",
-    description:
-      "Empathetic, Culturally-Tailored AI Health Coaches for Long-Term Condition Support (Plus Pharmacovigilance)",
-    color: "bg-gradient-to-br from-purple-50 to-purple-100", // Purple gradient
-    textColor: "text-[#1D4EC2]",
-    icon: "🔄",
+    description: "Empathetic, Culturally-Tailored AI Health Coaches for Long-Term Condition Support (Plus Pharmacovigilance)",
+    image: "/handlove.png",
   },
   {
     title: "EmotiCare Engine",
-    description:
-      "Emotion-Aware Health Coaching An AI-powered emotional companion built to understand how patients feel and respond with compassion and intelligence (Plus pharmacovigilance)",
-    color: "bg-gradient-to-br from-orange-50 to-orange-100", // Orange gradient
-    textColor: "text-[#1D4EC2]",
-    icon: "❤️",
+    description: "Emotion-Aware Health Coaching An AI-powered emotional companion built to understand how patients feel and respond with compassion and intelligence (Plus pharmacovigilance)",
+    image: "/circit.png",
   },
   {
     title: "AI Wound Scan",
     description: "Pre-op to post-op task tracking",
-    color: "bg-gradient-to-br from-blue-50 to-blue-100", // Blue gradient
-    textColor: "text-[#1D4EC2]",
-    icon: "🔍",
+    image: "/AI.png",
   },
   {
     title: "EmotiCare AI (Emotional support)",
     description: "Pre-op to post-op task tracking",
-    color: "bg-gradient-to-br from-gray-50 to-gray-100", // Gray gradient
-    textColor: "text-[#1D4EC2]",
-    icon: "🤗",
+    image: "/headphon.png",
   },
   {
     title: "24/7 Chat Support",
     description: "Pre-op to post-op task tracking",
-    color: "bg-gradient-to-br from-purple-50 to-purple-100", // Purple gradient
-    textColor: "text-[#1D4EC2]",
-    icon: "💬",
+    image: "/message.png",
   },
   {
     title: "Recovery Tracker",
     description: "Pre-op to post-op task tracking",
-    color: "bg-gradient-to-br from-blue-50 to-blue-100", // Blue gradient
-    textColor: "text-[#1D4EC2]",
-    icon: "📊",
+    image: "/monitor.png",
   },
   {
     title: "Multilingual Access",
     description: "Pre-op to post-op task tracking",
-    color: "bg-gradient-to-br from-gray-50 to-gray-100", // Gray gradient
-    textColor: "text-[#1D4EC2]",
-    icon: "🌍",
+    image: "/TV.png",
   },
   {
     title: "Surgery (Surgical Checklist)",
-    description: "Pre-op to post-op task tracking",
-    color: "bg-gradient-to-br from-purple-50 to-purple-100", // Purple gradient
-    textColor: "text-[#1D4EC2]",
-    icon: "✅",
+    description: "Pre-op to post-op task tracking jglfiooriototirotir  ootrotroirtotortortortortortortortortortortortortortortortortortortortortortortortortort ortortortortortortortortortortortortortortortortortortortortortortortortortorto  ",
+    image: "/knife.png",
   },
 ];
 
@@ -75,7 +55,7 @@ export function Features() {
       className="py-20 relative overflow-hidden"
       style={{
         backgroundImage: `url('/sugeryone.png'), url('/sugerytwo.png')`,
-        backgroundPosition: "right 10% top 60%, left 6% bottom 1%",
+        backgroundPosition: "right 9% top 60%, left 6% bottom -2%",
         backgroundRepeat: "no-repeat",
         backgroundSize: "20%, 15%",
       }}
@@ -98,21 +78,37 @@ export function Features() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className={`${feature.color} border h-full border-[#A0B9F3]`}
+              className="flex flex-col border-[#A0B9F3] group-hover:bg-[#1D4EC2] cursor-pointer min-h-[220px] h-full group-hover:text-white "
+              style={{
+                background: "radial-gradient(circle at bottom right, #CAD8F9 0%, #FFFFFF 70%) ",
+              }}
             >
-              <CardHeader className="pb-3">
-                <div className="text-3xl mb-3">{feature.icon}</div>
-                <CardTitle className={`text-xl font-bold ${feature.textColor}`}>
-                  {feature.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p
-                  className={`text-sm opacity-90 leading-relaxed text-[#595959] ${feature.textColor}`}
-                >
-                  {feature.description}
-                </p>
-              </CardContent>
+              {/* Applying hover background to the outer div */}
+              <div className="  transition-all duration-300 flex flex-col h-full">
+                <CardHeader className="">
+                  <div className="">
+                    <div className="w-12 h-12 pb-2 mr-4 flex-shrink-0">
+                      <img
+                        src={feature.image}
+                        alt={feature.title}
+                        className="w-8 h-8 object-contain"
+                        style={{
+                          filter:
+                            "brightness(0) saturate(100%) invert(33%) sepia(89%) saturate(1032%) hue-rotate(209deg) brightness(91%) contrast(91%)",
+                        }}
+                      />
+                    </div>
+                    <CardTitle className="text-xl font-bold text-[#1D4EC2] group-hover:text-white">
+                      {feature.title}
+                    </CardTitle>
+                  </div>
+                </CardHeader>
+                <CardContent className="flex-grow overflow-hidden">
+                  <p className="text-sm opacity-90 leading-relaxed text-[#595959] group-hover:text-white line-clamp-4">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </div>
             </Card>
           ))}
         </div>
