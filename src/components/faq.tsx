@@ -1,6 +1,7 @@
 "use client";
 
 import { Minus, Plus } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 
 const faqs = [
@@ -60,15 +61,31 @@ export function FAQ() {
             <h2 className="text-3xl md:text-4xl font-bold mt-4 mb-8 text-balance text-[#454545]">
               Everything You Need to Know
             </h2>
-            <img
+            {/* <img
               src="/angleiPhone 15.png"
               alt="LAMARE app interface"
               className="w-full lg:w-[510px] lg:absolute -bottom-20 z-20"
+            /> */}
+
+              <Image
+              src="/angleiPhone 15.png"
+              alt="LAMARE app interface"
+               width={510}
+               height={600}
+              className="w-full lg:w-[510px]  lg:absolute -bottom-20 z-20"
             />
-            <img
+            {/* <img
               src="/lung.png"
               alt="LAMARE app interface"
               className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-60"
+            /> */}
+
+             <Image
+              src="/lung.png"
+              alt="LAMARE app interface"
+                width={200} 
+                height={200}
+              className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-60 hidden lg:block"
             />
           </div>
 

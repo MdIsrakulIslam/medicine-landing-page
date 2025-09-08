@@ -1,7 +1,7 @@
 "use client";
-import type React from "react";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
+import type React from "react";
 import { useEffect, useState } from "react";
 
 export function Header() {
@@ -19,13 +19,18 @@ export function Header() {
     const handleScroll = () => {
       const sections = navItems.map((item) => item.id);
       const scrollPosition = window.scrollY + 100;
-      
+
       for (const sectionId of sections) {
-        const element = sectionId === "home" ? document.body : document.getElementById(sectionId);
+        const element =
+          sectionId === "home"
+            ? document.body
+            : document.getElementById(sectionId);
         if (element) {
           const offsetTop = sectionId === "home" ? 0 : element.offsetTop;
-          const offsetBottom = offsetTop + (sectionId === "home" ? window.innerHeight : element.offsetHeight);
-          
+          const offsetBottom =
+            offsetTop +
+            (sectionId === "home" ? window.innerHeight : element.offsetHeight);
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
             setActiveSection(sectionId);
             break;
@@ -46,7 +51,7 @@ export function Header() {
     e.preventDefault();
     setActiveSection(id);
     setIsMenuOpen(false);
-    
+
     if (id === "home") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
@@ -62,8 +67,13 @@ export function Header() {
     const handleClickOutside = (e: MouseEvent) => {
       const menu = document.getElementById("mobile-menu");
       const button = document.getElementById("menu-button");
-      
-      if (menu && button && !menu.contains(e.target as Node) && !button.contains(e.target as Node)) {
+
+      if (
+        menu &&
+        button &&
+        !menu.contains(e.target as Node) &&
+        !button.contains(e.target as Node)
+      ) {
         setIsMenuOpen(false);
       }
     };
@@ -76,7 +86,7 @@ export function Header() {
     <header className="text-white py-4 fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/1">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Logo />
-        
+
         {/* Desktop Navigation - Show on medium screens and above */}
         <nav className="hidden lg:flex items-center space-x-2 bg-[#A0B9F3] p-3 rounded-4xl">
           {navItems.map((item) => (
@@ -145,9 +155,11 @@ export function Header() {
       <div
         id="mobile-menu"
         className={`lg:hidden fixed top-full left-0 right-0 bg-gradient-to-b from-[#1D4EC2] to-[#4E83FF] shadow-lg transition-all duration-300 ease-in-out w-[250px] ${
-          isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          isMenuOpen
+            ? "max-h-screen opacity-100"
+            : "max-h-0 opacity-0 overflow-hidden"
         }`}
-        style={{ height: isMenuOpen ? 'calc(100vh - 80px)' : '0' }}
+        style={{ height: isMenuOpen ? "calc(100vh - 80px)" : "0" }}
       >
         <nav className="container mx-auto px-4 py-6 h-full flex flex-col ">
           <ul className="flex flex-col space-y-6 flex-grow justify-center">
@@ -167,7 +179,7 @@ export function Header() {
               </li>
             ))}
           </ul>
-          
+
           {/* Mobile Download Button */}
           <div className="mt-8 pb-8 px-4">
             <Button

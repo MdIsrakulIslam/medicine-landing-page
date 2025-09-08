@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -10,21 +11,25 @@ export function Hero() {
       }}
     >
       {/* Background decorative elements */}
-      <div className="absolute top-8 md:top-20 left-2 md:left-10 w-6 md:w-16 h-6 md:h-16 bg-white/10 rounded-full"></div>
-      <div className="absolute bottom-16 md:bottom-40 right-2 md:right-10 w-8 md:w-20 h-8 md:h-20 bg-white/10 rounded-full"></div>
+      {/* <div className="absolute top-8 md:top-20 left-2 md:left-10 w-6 md:w-16 h-6 md:h-16 bg-white/10 rounded-full"></div>
+      <div className="absolute bottom-16 md:bottom-40 right-2 md:right-10 w-8 md:w-20 h-8 md:h-20 bg-white/10 rounded-full"></div> */}
       
       {/* Marked images - Hidden on mobile and tablet, shown on desktop */}
       <div className="hidden lg:block absolute top-2/4 left-110 w-24 h-24 z-10">
-        <img
+        < Image
           src="/operation.png"
           alt="Decoration"
+            width={96}
+            height={96}
           className="w-full h-full object-contain"
         />
       </div>
       <div className="hidden lg:block absolute top-2/4 right-65 w-24 h-24 z-10">
-        <img
+        < Image
           src="/plus.png"
           alt="Decoration"
+            width={96}
+            height={96}
           className="w-full h-full object-contain"
         />
       </div>
@@ -92,23 +97,29 @@ export function Hero() {
             {/* Left side images */}
             <div className="relative -ml-20 rotate-30">
               <div className="absolute -top-25 left-23 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-30">
-                <img
+                < Image
                   src="/patient1.png"
                   alt="Healthcare professional"
+                    width={60}
+                    height={60}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -top-25 left-15 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-20">
-                <img
+                < Image
                   src="/patient2.jpg"
                   alt="Healthcare professional"
+                    width={60}
+                    height={60}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -top-25 left-6 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-10">
-                <img
+                < Image
                   src="/patient3.png"
                   alt="Happy patient"
+                    width={60}
+                    height={60}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -116,23 +127,29 @@ export function Hero() {
             {/* Right side images */}
             <div className="relative -mr-20 rotate-330">
               <div className="absolute -top-22 right-25 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-30">
-                <img
+                < Image
                   src="/doc1.png"
                   alt="Healthcare professional"
+                    width={60}
+                    height={60}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -top-22 right-35 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-20">
-                <img
+                < Image
                   src="/doc2.png"
                   alt="Happy patient"
+                    width={60}
+                    height={60}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -top-22 right-45 w-15 h-15 rounded-full overflow-hidden border-4 border-white/20 z-10">
-                <img
+                < Image
                   src="/doc3.png"
                   alt="Happy patient"
+                    width={60}
+                    height={60}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -157,9 +174,11 @@ export function Hero() {
         {/* Mobile mockups - Fully responsive */}
         <div className="flex justify-center items-end space-x-4 max-w-4xl mx-auto mt-8 md:mt-0">
           <div className="w-full max-w-sm md:max-w-none">
-            <img
+            < Image
               src="/iPhone 13 Pro.png"
               alt="LAMARE app dashboard"
+                width={1473}
+                height={672}
               className="w-full h-auto md:w-[1473px] md:h-[672px] object-cover mx-auto"
             />
           </div>

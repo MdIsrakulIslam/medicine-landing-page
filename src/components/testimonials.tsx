@@ -3,20 +3,21 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight } from "lucide-react"
+import Image from "next/image"
 
 const testimonials = [
   {
     text: "LAMARE gives my patients confidence and clarity throughout their healthcare journey. Tools like SurgiSmart, advanced wound scanning, CareLoop, EmotiCare, and pharmacovigilance monitoring truly transform how we deliver safe, personalised care",
     author: "Caitlyn King",
     role: "Head of Design, Layers",
-    avatar: "/professional-woman-headshot.png",
+    avatar: "/avatar1.png",
     rating: 5,
   },
   {
     text: "The AI-powered support system has revolutionized our patient care approach. The emotional intelligence and real-time monitoring capabilities are exceptional.",
     author: "Dr. Sarah Johnson",
     role: "Chief Medical Officer, HealthTech",
-    avatar: "/professional-doctor-headshot.png",
+    avatar: "/avatar2.png",
     rating: 5,
   },
 ]
@@ -41,9 +42,11 @@ export function Testimonials() {
           <p className="text-lg md:text-xl text-[#454545] mb-8 text-pretty">{currentTestimonial.text}</p>
 
           <div className="flex flex-col items-center mb-8">
-            <img
+            < Image
               src={currentTestimonial.avatar || "/placeholder.svg"}
               alt={currentTestimonial.author}
+                width={64}
+                height={64}
               className="w-16 h-16 rounded-full mb-4"
             />
             <h4 className="font-bold text-[#454545]">{currentTestimonial.author}</h4>

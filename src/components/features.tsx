@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
 
 const features = [
   {
@@ -8,12 +9,14 @@ const features = [
   },
   {
     title: "CareLoop (Long term conditions)",
-    description: "Empathetic, Culturally-Tailored AI Health Coaches for Long-Term Condition Support (Plus Pharmacovigilance)",
+    description:
+      "Empathetic, Culturally-Tailored AI Health Coaches for Long-Term Condition Support (Plus Pharmacovigilance)",
     image: "/handlove.png",
   },
   {
     title: "EmotiCare Engine",
-    description: "Emotion-Aware Health Coaching An AI-powered emotional companion built to understand how patients feel and respond with compassion and intelligence (Plus pharmacovigilance)",
+    description:
+      "Emotion-Aware Health Coaching An AI-powered emotional companion built to understand how patients feel and respond with compassion and intelligence (Plus pharmacovigilance)",
     image: "/circit.png",
   },
   {
@@ -43,7 +46,8 @@ const features = [
   },
   {
     title: "Surgery (Surgical Checklist)",
-    description: "Pre-op to post-op task tracking jglfiooriototirotir  ootrotroirtotortortortortortortortortortortortortortortortortortortortortortortortortort ortortortortortortortortortortortortortortortortortortortortortortortortortorto  ",
+    description:
+      "Pre-op to post-op task tracking jglfiooriototirotir  ootrotroirtotortortortortortortortortortortortortortortortortortortortortortortortortort ortortortortortortortortortortortortortortortortortortortortortortortortortorto  ",
     image: "/knife.png",
   },
 ];
@@ -52,7 +56,7 @@ export function Features() {
   return (
     <section
       id="features"
-      className="py-20 relative overflow-hidden"
+      className="py-20 relative overflow-hidden "
       style={{
         backgroundImage: `url('/sugeryone.png'), url('/sugerytwo.png')`,
         backgroundPosition: "right 9% top 60%, left 6% bottom -2%",
@@ -80,7 +84,8 @@ export function Features() {
               key={index}
               className="flex flex-col border-[#A0B9F3] group-hover:bg-[#1D4EC2] cursor-pointer min-h-[220px] h-full group-hover:text-white "
               style={{
-                background: "radial-gradient(circle at bottom right, #CAD8F9 0%, #FFFFFF 70%) ",
+                background:
+                  "radial-gradient(circle at bottom right, #CAD8F9 0%, #FFFFFF 70%) ",
               }}
             >
               {/* Applying hover background to the outer div */}
@@ -88,9 +93,11 @@ export function Features() {
                 <CardHeader className="">
                   <div className="">
                     <div className="w-12 h-12 pb-2 mr-4 flex-shrink-0">
-                      <img
+                      <Image
                         src={feature.image}
                         alt={feature.title}
+                        width={32}
+                        height={32}
                         className="w-8 h-8 object-contain"
                         style={{
                           filter:

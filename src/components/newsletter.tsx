@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export function Newsletter() {
   return (
@@ -24,7 +25,7 @@ export function Newsletter() {
               Be the first to know when we launch
             </h2>
             <p className="text-blue-100 mb-8 text-pretty">
-              We're still building. Subscribe for updates and 20% off when we
+              We&apos;re still building. Subscribe for updates and 20% off when we
               launch. No spam, we promise!
             </p>
             <Button
@@ -47,9 +48,11 @@ export function Newsletter() {
           </div>
 
           <div className="flex justify-center">
-            <img
+            < Image
               src="/towiphone.png"
               alt="LAMARE app launch preview"
+                width={1000}
+                height={800}
               className="w-[1000px]  rounded-2xl shadow-2xl relative z-10"
             />
           </div>
