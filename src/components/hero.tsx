@@ -51,17 +51,17 @@ export function Hero() {
           <div className="flex flex-col md:flex-row gap-4 justify-center px-4 md:px-0">
             <Button
               size="lg"
-              className="w-full md:w-auto px-8 py-4 md:py-8 rounded-4xl transition-all duration-300 hover:scale-105 font-semibold group relative overflow-hidden text-lg"
+              className="w-full md:w-auto px-8 py-4 md:py-8 rounded-4xl transition-all duration-300  font-semibold group relative overflow-hidden text-lg"
               style={{
                 background: "linear-gradient(90deg, #1D4EC2 0%, #4E83FF 100%)",
-                color: "#ffffff",
-                border: "none",
-                boxShadow: "0 4px 12px rgba(29, 78, 194, 0.4)",
+                color: "#ffffff !important" ,
+                border: "none !important",
+                // boxShadow: "0 4px 12px rgba(29, 78, 194, 0.4)",
               }}
             >
               {/* Hover effect overlay */}
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-4xl"></div>
-              <div className="flex gap-3 items-center justify-center relative z-10">
+              <div className="absolute inset-0  opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-4xl"></div>
+              <div className="flex gap-3 items-center justify-center relative z-10 cursor-pointer">
                 <span>Download App</span>
                 <div className="flex items-center justify-center w-8 h-8 rounded-full border-l-2 border-white shadow-none group-hover:translate-x-1 transition-transform duration-300">
                   <span>→</span>
@@ -71,7 +71,7 @@ export function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="w-full md:w-auto px-8 py-4 md:py-8 bg-transparent rounded-4xl group relative overflow-hidden transition-all duration-300 hover:bg-white/10 text-lg"
+              className="w-full md:w-auto px-8 py-4 md:py-8 bg-transparent rounded-4xl group relative overflow-hidden transition-all duration-300 hover:bg-white/10 text-lg cursor-pointer"
               style={{
                 borderColor: "#ffffff !important",
                 color: "#ffffff !important",
@@ -79,8 +79,8 @@ export function Hero() {
               }}
             >
               {/* Hover effect overlay */}
-              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-4xl"></div>
-              <div className="flex gap-2 items-center justify-center relative z-10">
+              <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-4xl "></div>
+              <div className="flex gap-2 items-center justify-center relative z-10 ">
                 <div>How It Works</div>
                 <div className="flex items-center justify-center w-8 h-8 rounded-full border-l-2 border-white shadow-none group-hover:translate-x-1 transition-transform duration-300">
                   <span>→</span>
@@ -158,16 +158,16 @@ export function Hero() {
           
           {/* Statistics - Responsive */}
           <div className="text-left rotate-12 md:rotate-30 -ml-2 md:-ml-20 z-10 hidden lg:block">
-            <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent ">
+            <div className="text-2xl md:text-4xl  bg-gradient-to-r from-white to-white bg-clip-text text-transparent ">
               5k+ Happy
             </div>
-            <div className="text-xl md:text-3xl">patients</div>
+            <div className="text-xl md:text-3xl bg-gradient-to-r from-white bg-clip-text text-transparent">patients</div>
           </div>
           <div className="text-left rotate-12 md:rotate-330 -mr-2 md:-mr-40 z-10 hidden lg:block">
-            <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-white via-blue-100 to-blue-100 bg-clip-text text-transparent">
+            <div className="text-2xl md:text-4xl  bg-gradient-to-r from-white to-white bg-clip-text text-transparent">
               500+ healthcare
             </div>
-            <div className="text-xl md:text-3xl">providers</div>
+            <div className="text-xl md:text-3xl bg-gradient-to-r from-white bg-clip-text text-transparent">professional</div>
           </div>
         </div>
 

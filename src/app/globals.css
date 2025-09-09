@@ -1,6 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -138,4 +138,9 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Custom styles for feature cards */
+.feature-card:hover .feature-icon {
+  filter: brightness(0) invert(1) !important;
 }

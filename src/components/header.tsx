@@ -4,16 +4,16 @@ import { Button } from "@/components/ui/button";
 import type React from "react";
 import { useEffect, useState } from "react";
 
+const navItems = [
+  { id: "home", label: "Home", href: "#" },
+  { id: "features", label: "Features", href: "#features" },
+  { id: "how-it-works", label: "How It Works", href: "#how-it-works" },
+  { id: "faq", label: "FAQs", href: "#faq" },
+  { id: "testimonials", label: "Testimonials", href: "#testimonials" },
+];
 export function Header() {
   const [activeSection, setActiveSection] = useState("home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navItems = [
-    { id: "home", label: "Home", href: "#" },
-    { id: "features", label: "Features", href: "#features" },
-    { id: "how-it-works", label: "How It Works", href: "#how-it-works" },
-    { id: "faq", label: "FAQs", href: "#faq" },
-    { id: "testimonials", label: "Testimonials", href: "#testimonials" },
-  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -114,10 +114,10 @@ export function Header() {
               background: "linear-gradient(90deg, #1D4EC2 0%, #4E83FF 100%)",
               color: "#ffffff",
               border: "none",
-              boxShadow: "0 4px 12px rgba(29, 78, 194, 0.4)",
+              //   boxShadow: "0 4px 12px rgba(29, 78, 194, 0.4)",
             }}
           >
-            <div className="flex gap-3 items-center">
+            <div className="flex gap-3 items-center cursor-pointer">
               <span className="text-lg">Download App</span>
               <div className="flex items-center justify-center w-8 h-8 rounded-full border-l-2 border-white shadow-none">
                 <span className="text-lg">→</span>
@@ -128,7 +128,7 @@ export function Header() {
           {/* Mobile Menu Button - Show on medium screens and below */}
           <button
             id="menu-button"
-            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 relative focus:outline-none"
+            className="lg:hidden flex flex-col justify-center items-center w-10 h-10 relative focus:outline-none hover:cursor-pointer"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -184,7 +184,7 @@ export function Header() {
           <div className="mt-8 pb-8 px-4">
             <Button
               size="lg"
-              className="w-full py-5 rounded-xl transition-all duration-300 font-semibold text-lg"
+              className="w-full py-5 rounded-xl transition-all duration-300 font-semibold text-lg "
               style={{
                 background: "rgba(255, 255, 255, 0.9)",
                 color: "#1D4EC2",
@@ -192,7 +192,7 @@ export function Header() {
                 boxShadow: "0 4px 12px rgba(255, 255, 255, 0.3)",
               }}
             >
-              <div className="flex gap-3 items-center justify-center">
+              <div className="flex gap-3 items-center justify-center cursor-pointer">
                 <span className="text-lg">Download App</span>
                 <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-600 shadow-none">
                   <span className="text-lg text-white">→</span>

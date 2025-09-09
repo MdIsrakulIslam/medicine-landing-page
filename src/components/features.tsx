@@ -82,14 +82,16 @@ export function Features() {
           {features.map((feature, index) => (
             <Card
               key={index}
-              className="flex flex-col border-[#A0B9F3] group-hover:bg-[#1D4EC2] cursor-pointer min-h-[220px] h-full group-hover:text-white "
+              className="flex flex-col border-[#A0B9F3] cursor-pointer min-h-[220px] h-full group transition-all duration-300 relative overflow-hidden feature-card"
               style={{
                 background:
-                  "radial-gradient(circle at bottom right, #CAD8F9 0%, #FFFFFF 70%) ",
+                  "radial-gradient(circle at bottom right, #CAD8F9 0%, #FFFFFF 70%)",
               }}
             >
-              {/* Applying hover background to the outer div */}
-              <div className="  transition-all duration-300 flex flex-col h-full">
+              {/* Hover overlay */}
+              <div className="absolute inset-0 bg-[#1D4EC2] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+              {/* Content container */}
+              <div className="relative z-10 transition-all duration-300 flex flex-col h-full">
                 <CardHeader className="">
                   <div className="">
                     <div className="w-12 h-12 pb-2 mr-4 flex-shrink-0">
@@ -98,10 +100,11 @@ export function Features() {
                         alt={feature.title}
                         width={32}
                         height={32}
-                        className="w-8 h-8 object-contain"
+                        className="w-8 h-8 object-contain transition-all duration-300 feature-icon"
                         style={{
                           filter:
                             "brightness(0) saturate(100%) invert(33%) sepia(89%) saturate(1032%) hue-rotate(209deg) brightness(91%) contrast(91%)",
+                          transition: "filter 0.3s ease",
                         }}
                       />
                     </div>

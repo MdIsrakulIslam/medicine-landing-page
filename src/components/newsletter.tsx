@@ -38,7 +38,7 @@ export function Newsletter() {
                 boxShadow: "0 4px 12px rgba(29, 78, 194, 0.4)",
               }}
             >
-              <div className="flex gap-3 items-center ">
+              <div className="flex gap-3 items-center cursor-pointer ">
                 <span className="text-lg">Download App</span>
                 <div className="flex items-center justify-center w-8 h-8 rounded-full   border-l-2 border-white shadow-none">
                   <span className="text-lg">→</span>

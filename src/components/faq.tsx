@@ -67,12 +67,12 @@ export function FAQ() {
               className="w-full lg:w-[510px] lg:absolute -bottom-20 z-20"
             /> */}
 
-              <Image
+            <Image
               src="/angleiPhone 15.png"
               alt="LAMARE app interface"
-               width={510}
-               height={600}
-              className="w-full lg:w-[510px]  lg:absolute -bottom-20 z-20"
+              width={510}
+              height={600}
+              className="w-full lg:w-[510px]  lg:absolute -bottom-20 left-25 z-20"
             />
             {/* <img
               src="/lung.png"
@@ -80,11 +80,11 @@ export function FAQ() {
               className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-60"
             /> */}
 
-             <Image
+            <Image
               src="/lung.png"
               alt="LAMARE app interface"
-                width={200} 
-                height={200}
+              width={200}
+              height={200}
               className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-60 hidden lg:block"
             />
           </div>
@@ -101,11 +101,11 @@ export function FAQ() {
                   <span className="font-mediu text-xl text-[#454545]">
                     {faq.question}
                   </span>
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-white border flex items-center justify-center">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full  border-2 flex items-center justify-center border-[#595959]">
                     {openIndex === index ? (
-                      <Minus className="w-5 h-5 text-gray-500" />
+                      <Minus className="w-5 h-5 text-[#595959] cursor-pointer " />
                     ) : (
-                      <Plus className="w-5 h-5 text-gray-500" />
+                      <Plus className="w-5 h-5 text-[#595959] cursor-pointer" />
                     )}
                   </div>
                 </button>
