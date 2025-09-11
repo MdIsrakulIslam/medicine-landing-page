@@ -43,7 +43,7 @@ export function FAQ() {
   return (
     <section
       id="faq"
-      className="py-20 relative overflow-hidden mt-0"
+      className="py-20 relative  mt-0 max-w-[1920px] mx-auto"
       style={{
         backgroundImage: "url('/faq.jpg')", // Add your background image path
         backgroundSize: "cover",
@@ -85,7 +85,7 @@ export function FAQ() {
               alt="LAMARE app interface"
               width={200}
               height={200}
-              className="w-full lg:w-[200px] lg:absolute  z-10 -ml-60 -mt-60 hidden lg:block"
+              className="w-full lg:w-[200px] absolute  z-30 -ml-60 -mt-78 hidden lg:block"
             />
           </div>
 

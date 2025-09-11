@@ -47,7 +47,7 @@ const features = [
   {
     title: "Surgery (Surgical Checklist)",
     description:
-      "Pre-op to post-op task tracking jglfiooriototirotir  ootrotroirtotortortortortortortortortortortortortortortortortortortortortortortortortort ortortortortortortortortortortortortortortortortortortortortortortortortortorto  ",
+      "Pre-op to post-op task tracking jglfiooriototirotir  ",
     image: "/knife.png",
   },
 ];
@@ -56,19 +56,19 @@ export function Features() {
   return (
     <section
       id="features"
-      className="py-20 relative overflow-hidden "
+      className="py-20 relative overflow-hidden  max-w-[1800px] mx-auto  "
       style={{
         backgroundImage: `url('/sugeryone.png'), url('/sugerytwo.png')`,
-        backgroundPosition: "right 9% top 60%, left 6% bottom -2%",
+        backgroundPosition: "right 7% top 52%, left 4% bottom -2%",
         backgroundRepeat: "no-repeat",
         backgroundSize: "20%, 15%",
       }}
     >
       {/* Optional overlay for better readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-white/30"></div>
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-white/30"></div> */}
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="mb-16 max-w-6xl mx-auto">
+        <div className="mb-16 max-w-6xl mx-auto ">
           <span className="text-blue-600 font-semibold text-lg">
             • Valuable Features
           </span>
@@ -78,7 +78,7 @@ export function Features() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <Card
               key={index}

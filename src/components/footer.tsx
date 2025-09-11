@@ -2,7 +2,7 @@ import { Logo } from "@/components/logo"
 
 export function Footer() {
   return (
-    <footer className="bg-[#1F1F1F] text-white py-12">
+    <footer className="bg-[#1F1F1F] text-white py-12 max-w-[1920px] mx-auto">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center mb-8">
           <Logo />

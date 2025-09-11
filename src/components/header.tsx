@@ -83,8 +83,8 @@ export function Header() {
   }, []);
 
   return (
-    <header className="text-white py-4 fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/1">
-      <div className="container mx-auto px-4 flex items-center justify-between">
+    <header className="text-white py-4 fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/1 supports-[backdrop-filter]:backdrop-blur max-w-[1920px] mx-auto">
+      <div className="container mx-auto px-4 flex items-center justify-between ">
         <Logo />
 
         {/* Desktop Navigation - Show on medium screens and above */}
@@ -109,7 +109,7 @@ export function Header() {
           {/* Download Button - Show on medium screens and above */}
           <Button
             size="lg"
-            className="hidden md:flex px-6 py-3 lg:px- lg:py-8 rounded-4xl transition-all duration-300 hover:scale-105 font-semibold"
+            className="hidden md:flex px-6  py-3 md:py-8 lg:py-7 xl:py-8 rounded-4xl transition-all duration-300 hover:scale-105 font-semibold"
             style={{
               background: "linear-gradient(90deg, #1D4EC2 0%, #4E83FF 100%)",
               color: "#ffffff",

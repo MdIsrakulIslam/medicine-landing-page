@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export function Newsletter() {
   return (
-    <section className="relative text-white py-20 overflow-hidden">
+    <section className="relative text-white py-20 overflow-hidden   max-w-[1920px] mx-auto">
       {/* Background Image Container */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url('/lungtwo.png') ,url('/lungtwo.png')`,
-          backgroundPosition: "right 8% top 0%, left bottom -17%",
+          backgroundImage: `url('/lungtwo.png') ,url('/lung3.png')`,
+          backgroundPosition: "right 2% top 0%, left  6% bottom ",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "15%, 15%",
+          backgroundSize: "15%, 25%",
         }}
       />
 
